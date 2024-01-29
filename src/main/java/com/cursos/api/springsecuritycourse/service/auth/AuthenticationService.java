@@ -38,7 +38,7 @@ public class AuthenticationService {
         extraClaims.put("name",user.getName());
         extraClaims.put("role",user.getRole().name());
         extraClaims.put("authorities",user.getAuthorities());
-        
+
         return  extraClaims;
     }
 }
