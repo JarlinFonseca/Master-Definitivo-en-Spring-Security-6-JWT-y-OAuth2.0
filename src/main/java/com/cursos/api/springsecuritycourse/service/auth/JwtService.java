@@ -1,20 +1,18 @@
 package com.cursos.api.springsecuritycourse.service.auth;
 
+import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Header;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.hibernate.event.spi.SaveOrUpdateEvent;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
 import java.util.Date;
-import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 @Service
 public class JwtService {
@@ -47,5 +45,14 @@ public class JwtService {
         byte[] passwordDecoded = Decoders.BASE64.decode(SECRET_KEY);
         System.out.println(new String(passwordDecoded));
         return Keys.hmacShaKeyFor(passwordDecoded);
+    }
+
+    public String extractUsername(String jwt) {
+        return extractAllClaims(jwt).getSubject();
+    }
+
+    private Claims extractAllClaims(String jwt) {
+        return Jwts.parserBuilder().setSigningKey(generateKey()).build()
+                .parseClaimsJws(jwt).getBody();
     }
 }
