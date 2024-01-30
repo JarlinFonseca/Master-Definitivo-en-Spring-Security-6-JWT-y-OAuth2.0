@@ -7,7 +7,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
-import org.springframework.web.client.HttpServerErrorException;
 
 import java.time.LocalDateTime;
 import java.util.stream.Collectors;
@@ -22,7 +21,8 @@ public class GlobalExceptionHandler {
         apiError.setBackendMessage(exception.getLocalizedMessage());
         apiError.setUrl(request.getRequestURL().toString());
         apiError.setMethod(request.getMethod());
-        apiError.setMethod("Error interno en el servidor, vuelve a intentarlo");
+        apiError.setMessage("Error interno en el servidor, vuelve a intentarlo");
+        apiError.setTimestamp(LocalDateTime.now() );
 
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(apiError);
@@ -37,7 +37,7 @@ public class GlobalExceptionHandler {
         apiError.setUrl(request.getRequestURL().toString());
         apiError.setMethod(request.getMethod());
         apiError.setTimestamp(LocalDateTime.now());
-        apiError.setMethod("Error en la petición enviada");
+        apiError.setMessage("Error en la petición enviada");
 
         System.out.println(
                 exception.getAllErrors().stream().map(each -> each.getDefaultMessage())

@@ -8,8 +8,10 @@ import com.cursos.api.springsecuritycourse.persistence.util.Role;
 import com.cursos.api.springsecuritycourse.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
+@Service
 public class UserServiceImpl implements UserService {
     @Autowired
     private UserRepository userRepository;

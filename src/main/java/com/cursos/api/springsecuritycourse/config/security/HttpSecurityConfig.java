@@ -20,7 +20,7 @@ public class HttpSecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-      SecurityFilterChain securityFilterChain= http
+      SecurityFilterChain filterChain= http
                 .csrf(csrfConfig -> csrfConfig.disable())
                 .sessionManagement(sessMagConfig -> sessMagConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(daoAuthProvider)
@@ -31,7 +31,7 @@ public class HttpSecurityConfig {
                 })
                 .build();
 
-      return securityFilterChain;
+      return filterChain;
 
     }
 }
