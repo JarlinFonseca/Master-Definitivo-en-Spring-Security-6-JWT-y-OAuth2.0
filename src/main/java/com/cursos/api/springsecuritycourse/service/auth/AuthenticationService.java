@@ -4,12 +4,14 @@ import com.cursos.api.springsecuritycourse.dto.auth.AuthenticationRequest;
 import com.cursos.api.springsecuritycourse.dto.auth.AuthenticationResponse;
 import com.cursos.api.springsecuritycourse.dto.RegisteredUser;
 import com.cursos.api.springsecuritycourse.dto.SaveUser;
+import com.cursos.api.springsecuritycourse.exception.ObjectNotFoundException;
 import com.cursos.api.springsecuritycourse.persistence.entity.User;
 import com.cursos.api.springsecuritycourse.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -76,5 +78,27 @@ public class AuthenticationService {
             System.out.println(e.getMessage());
             return false;
         }
+    }
+
+    public User findLoggedInUser() {
+       UsernamePasswordAuthenticationToken auth =
+               (UsernamePasswordAuthenticationToken)SecurityContextHolder.getContext().getAuthentication();
+
+          String username = (String) auth.getPrincipal();
+
+          return userService.findOneByUsername(username)
+                  .orElseThrow(()->new ObjectNotFoundException("User not found. Username: "+username));
+
+    }
+
+    public Boolean validateAuthLoggedByUsername(String username){
+
+        UsernamePasswordAuthenticationToken auth =
+                (UsernamePasswordAuthenticationToken)SecurityContextHolder.getContext().getAuthentication();
+
+        String usernameAuth = (String) auth.getPrincipal();
+
+        return (usernameAuth.equals(username));
+
     }
 }

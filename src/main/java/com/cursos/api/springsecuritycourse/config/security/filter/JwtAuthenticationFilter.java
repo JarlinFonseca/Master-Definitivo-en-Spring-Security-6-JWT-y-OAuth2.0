@@ -11,6 +11,7 @@ import jakarta.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.web.authentication.WebAuthenticationDetails;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.filter.OncePerRequestFilter;
@@ -50,6 +51,7 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
                 username,null, user.getAuthorities()
         );
+        authToken.setDetails(new WebAuthenticationDetails(request));
         SecurityContextHolder.getContext().setAuthentication(authToken);
 
         //5. Ejecutar el registro de filtros
