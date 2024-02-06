@@ -29,7 +29,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(newUser.getPassword()));
         user.setName(newUser.getName());
         user.setUsername(newUser.getUsername());
-        user.setRole(Role.ROLE_CUSTOMER);
+        user.setRole(Role.CUSTOMER);
 
 
 
