@@ -7,6 +7,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
@@ -17,6 +18,7 @@ import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity(prePostEnabled = true)
 public class HttpSecurityConfig {
 
     @Autowired
@@ -35,7 +37,7 @@ public class HttpSecurityConfig {
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests( authReqConfig ->{
 
-                    buildRequestMatchers(authReqConfig);
+                    buildRequestMatchersV2(authReqConfig);
 
                 })
                 .build();
@@ -91,6 +93,18 @@ public class HttpSecurityConfig {
                 .hasAnyRole(Role.ADMINISTRATOR.name(), Role.ASSISTANT_ADMINISTRATOR.name(), Role.CUSTOMER.name());
 
 
+            /*
+              Autorización de enpoints públicos
+             */
+
+        authReqConfig.requestMatchers(HttpMethod.POST,"/customers").permitAll();
+        authReqConfig.requestMatchers(HttpMethod.POST,"/auth/authenticate").permitAll();
+        authReqConfig.requestMatchers(HttpMethod.GET,"/auth/validate").permitAll();
+
+        authReqConfig.anyRequest().authenticated();
+    }
+
+    private static void buildRequestMatchersV2(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authReqConfig) {
             /*
               Autorización de enpoints públicos
              */
