@@ -13,6 +13,7 @@ import org.springframework.security.config.annotation.web.configurers.AuthorizeH
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
 @Configuration
 @EnableWebSecurity
@@ -58,7 +59,8 @@ public class HttpSecurityConfig {
                 .hasRole(Role.ADMINISTRATOR.name());
 
 
-        authReqConfig.requestMatchers(HttpMethod.PUT,"/products/{productId}")
+//        authReqConfig.requestMatchers(HttpMethod.PUT,"/products/{productId}")
+        authReqConfig.requestMatchers(RegexRequestMatcher.regexMatcher(HttpMethod.GET, "/products/[0-9]*"))
                 .hasAnyRole(Role.ADMINISTRATOR.name(), Role.ASSISTANT_ADMINISTRATOR.name());
 
         authReqConfig.requestMatchers(HttpMethod.PUT,"/products/{productId}/disabled")
