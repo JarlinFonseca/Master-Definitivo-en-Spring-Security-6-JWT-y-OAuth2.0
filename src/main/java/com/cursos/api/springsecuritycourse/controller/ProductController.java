@@ -28,7 +28,8 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @PreAuthorize("hasAnyRole('ADMINISTRATOR', 'ASSISTANT_ADMINISTRATOR')")
+
+    @PreAuthorize("hasAuthority('READ_ALL_PRODUCTS')")
     @GetMapping
     public ResponseEntity<Page<Product>> findAll(Pageable pageable){
         Page<Product> productsPage = productService.findAll(pageable);
@@ -40,7 +41,7 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    @PreAuthorize("hasAnyRole('ADMINISTRATOR', 'ASSISTANT_ADMINISTRATOR')")
+    @PreAuthorize("hasAuthority('READ_ONE_PRODUCT')")
     @GetMapping("/{productId}")
     public ResponseEntity<Product> findOneById(@PathVariable Long productId){
         Optional<Product> product = productService.findOneById(productId);
@@ -52,13 +53,13 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    @PreAuthorize("hasRole('ADMINISTRATOR')")
+    @PreAuthorize("hasAuthority('CREATE_ONE_PRODUCT')")
     @PostMapping
     public ResponseEntity<Product> createOne(@RequestBody @Valid SaveProduct saveProduct){
       Product product = productService.createOne(saveProduct);
       return ResponseEntity.status(HttpStatus.CREATED).body(product);
     }
-    @PreAuthorize("hasAnyRole('ADMINISTRATOR', 'ASSISTANT_ADMINISTRATOR')")
+    @PreAuthorize("hasAuthority('UPDATE_ONE_PRODUCT')")
     @PutMapping("/{productId}")
     public ResponseEntity<Product> updateOneById(@PathVariable Long productId,
                                                  @RequestBody @Valid SaveProduct saveProduct){
@@ -66,7 +67,7 @@ public class ProductController {
         return ResponseEntity.ok(product);
     }
 
-    @PreAuthorize("hasRole('ADMINISTRATOR')")
+    @PreAuthorize("hasAuthority('DISABLE_ONE_PRODUCT')")
     @PutMapping("/{productId}/disabled")
     public ResponseEntity<Product> disableOneById(@PathVariable Long productId){
         Product product = productService.disableOneById(productId);
