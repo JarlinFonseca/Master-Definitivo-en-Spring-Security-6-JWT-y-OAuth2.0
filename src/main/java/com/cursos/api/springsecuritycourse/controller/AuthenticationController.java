@@ -2,7 +2,7 @@ package com.cursos.api.springsecuritycourse.controller;
 
 import com.cursos.api.springsecuritycourse.dto.auth.AuthenticationResponse;
 import com.cursos.api.springsecuritycourse.dto.auth.AuthenticationRequest;
-import com.cursos.api.springsecuritycourse.persistence.entity.User;
+import com.cursos.api.springsecuritycourse.persistence.entity.security.User;
 import com.cursos.api.springsecuritycourse.service.auth.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;

@@ -1,7 +1,7 @@
 package com.cursos.api.springsecuritycourse.service;
 
 import com.cursos.api.springsecuritycourse.dto.SaveUser;
-import com.cursos.api.springsecuritycourse.persistence.entity.User;
+import com.cursos.api.springsecuritycourse.persistence.entity.security.User;
 
 import java.util.Optional;
 

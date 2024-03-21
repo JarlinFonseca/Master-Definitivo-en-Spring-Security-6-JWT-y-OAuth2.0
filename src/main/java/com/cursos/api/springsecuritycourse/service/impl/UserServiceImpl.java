@@ -2,9 +2,9 @@ package com.cursos.api.springsecuritycourse.service.impl;
 
 import com.cursos.api.springsecuritycourse.dto.SaveUser;
 import com.cursos.api.springsecuritycourse.exception.InvalidPasswordException;
-import com.cursos.api.springsecuritycourse.persistence.entity.User;
+import com.cursos.api.springsecuritycourse.persistence.entity.security.User;
 import com.cursos.api.springsecuritycourse.persistence.repository.UserRepository;
-import com.cursos.api.springsecuritycourse.persistence.util.Role;
+import com.cursos.api.springsecuritycourse.persistence.util.RoleEnum;
 import com.cursos.api.springsecuritycourse.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -28,7 +28,7 @@ public class UserServiceImpl implements UserService {
         user.setPassword(passwordEncoder.encode(newUser.getPassword()));
         user.setName(newUser.getName());
         user.setUsername(newUser.getUsername());
-        user.setRole(Role.CUSTOMER);
+        user.setRole(RoleEnum.CUSTOMER);
 
 
 

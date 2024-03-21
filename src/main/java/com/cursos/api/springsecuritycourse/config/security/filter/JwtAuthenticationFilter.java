@@ -1,7 +1,7 @@
 package com.cursos.api.springsecuritycourse.config.security.filter;
 
 import com.cursos.api.springsecuritycourse.exception.ObjectNotFoundException;
-import com.cursos.api.springsecuritycourse.persistence.entity.User;
+import com.cursos.api.springsecuritycourse.persistence.entity.security.User;
 import com.cursos.api.springsecuritycourse.service.UserService;
 import com.cursos.api.springsecuritycourse.service.auth.JwtService;
 import jakarta.servlet.FilterChain;
