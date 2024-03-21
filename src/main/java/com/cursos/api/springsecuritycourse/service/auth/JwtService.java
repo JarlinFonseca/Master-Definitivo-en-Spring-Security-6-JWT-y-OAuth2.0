@@ -4,6 +4,8 @@ import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
@@ -16,17 +18,19 @@ import java.util.Map;
 public class JwtService {
 
     @Value("${security.jwt.expiration-in-minutes}")
-    private Long EXPIRATION_IN_MINUTES;
+    private Long expirationInMinutes;
 
     @Value("${security.jwt.secret-key}")
-    private String SECRET_KEY;
+    private String secretKey;
+    private static final Logger LOGGER = LoggerFactory.getLogger(JwtService.class);
+
 
     public String generateToken(UserDetails user, Map<String, Object> extraClaims ) {
 
         Date issuedAt = new Date(System.currentTimeMillis());
-        Date expiration = new Date( (EXPIRATION_IN_MINUTES*60*1000)+ issuedAt.getTime() );
+        Date expiration = new Date( (expirationInMinutes*60*1000)+ issuedAt.getTime() );
 
-        String jwt= Jwts.builder()
+        return Jwts.builder()
                 .header()
                     .type("JWT")
                     .and()
@@ -39,13 +43,12 @@ public class JwtService {
                 .signWith(generateKey(), Jwts.SIG.HS256)
                 .compact();
 
-
-        return jwt;
     }
 
     private SecretKey generateKey() {
-        byte[] passwordDecoded = Decoders.BASE64.decode(SECRET_KEY);
-        System.out.println(new String(passwordDecoded));
+        byte[] passwordDecoded = Decoders.BASE64.decode(secretKey);
+        String passwordString = new String(passwordDecoded);
+        LOGGER.info(passwordString);
         return Keys.hmacShaKeyFor(passwordDecoded);
     }
 

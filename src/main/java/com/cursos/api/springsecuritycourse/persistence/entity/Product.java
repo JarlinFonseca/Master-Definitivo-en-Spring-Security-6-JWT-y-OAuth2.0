@@ -27,8 +27,8 @@ public class Product {
     @JoinColumn(name = "category_id")
     private Category category;
 
-    public static enum ProductStatus{
-        ENABLED, DISABLED;
+    public enum ProductStatus{
+        ENABLED, DISABLED
     }
 
     public Long getId() {

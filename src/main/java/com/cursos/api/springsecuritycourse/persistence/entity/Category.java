@@ -18,8 +18,8 @@ public class Category {
     @Enumerated(EnumType.STRING)
     private CategoryStatus status;
 
-    public static enum CategoryStatus{
-        ENABLED, DISABLED;
+    public enum CategoryStatus{
+        ENABLED, DISABLED
     }
 
     public Long getId() {

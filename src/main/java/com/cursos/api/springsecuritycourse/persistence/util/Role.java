@@ -30,7 +30,7 @@ public enum Role {
 
             RolePermission.READ_MY_PROFILE
     )),
-    CUSTOMER(Arrays.asList(
+    CUSTOMER(List.of(
             RolePermission.READ_MY_PROFILE
     ));
 
@@ -44,7 +44,7 @@ public enum Role {
         return permissions;
     }
 
-    public void setPermissions(List<RolePermission> permissions) {
+    void setPermissions(List<RolePermission> permissions) {
         this.permissions = permissions;
     }
 }

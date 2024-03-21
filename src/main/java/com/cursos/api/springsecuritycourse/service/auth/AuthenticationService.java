@@ -7,7 +7,9 @@ import com.cursos.api.springsecuritycourse.dto.SaveUser;
 import com.cursos.api.springsecuritycourse.exception.ObjectNotFoundException;
 import com.cursos.api.springsecuritycourse.persistence.entity.User;
 import com.cursos.api.springsecuritycourse.service.UserService;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -19,15 +21,13 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Service
+@RequiredArgsConstructor
 public class AuthenticationService {
 
-    @Autowired
-    private UserService userService;
-    @Autowired
-    private JwtService jwtService;
-
-    @Autowired
-    private AuthenticationManager authenticationManager;
+    private final UserService userService;
+    private final JwtService jwtService;
+    private final AuthenticationManager authenticationManager;
+    private static final Logger LOGGER = LoggerFactory.getLogger(AuthenticationService.class);
 
     public RegisteredUser registerOneCustomer(SaveUser newUser) {
         User user = userService.registerOneCustomer(newUser);
@@ -61,7 +61,7 @@ public class AuthenticationService {
 
         authenticationManager.authenticate(authentication);
 
-        UserDetails user= userService.findOneByUsername(authRequest.getUsername()).get();
+        UserDetails user= userService.findOneByUsername(authRequest.getUsername()).orElseThrow();
         String jwt = jwtService.generateToken(user, generateExtraClaims((User) user));
 
         AuthenticationResponse authRsp = new AuthenticationResponse();
@@ -75,7 +75,7 @@ public class AuthenticationService {
             jwtService.extractUsername(jwt);
             return true;
         }catch (Exception e){
-            System.out.println(e.getMessage());
+            LOGGER.error(e.getMessage());
             return false;
         }
     }

@@ -14,6 +14,6 @@ public enum RolePermission {
     UPDATE_ONE_CATEGORY,
     DISABLE_ONE_CATEGORY,
 
-    READ_MY_PROFILE;
+    READ_MY_PROFILE
 
 }

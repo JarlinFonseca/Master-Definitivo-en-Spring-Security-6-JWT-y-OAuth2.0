@@ -5,7 +5,7 @@ import com.cursos.api.springsecuritycourse.persistence.entity.Product;
 
 import com.cursos.api.springsecuritycourse.service.ProductService;
 import jakarta.validation.Valid;
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -23,10 +23,10 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/products")
+@RequiredArgsConstructor
 public class ProductController {
 
-    @Autowired
-    private ProductService productService;
+    private final ProductService productService;
 
 
     @GetMapping
