@@ -37,4 +37,5 @@ public class CustomAccessDeniedHandler implements AccessDeniedHandler {
         String apiErrorAsJson = objectMapper.writeValueAsString(apiError);
         response.getWriter().write(apiErrorAsJson);
     }
+
 }
