@@ -1,4 +1,4 @@
-package com.cursos.api.springsecuritycourse.persistence.repository;
+package com.cursos.api.springsecuritycourse.persistence.repository.security;
 
 import com.cursos.api.springsecuritycourse.persistence.entity.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
