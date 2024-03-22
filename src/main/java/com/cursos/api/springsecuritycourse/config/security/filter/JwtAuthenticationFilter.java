@@ -31,15 +31,14 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
 
         LOGGER.info("ENTRO EN EL FILTRO JWT AUTHENTICATION FILTER");
-        //1. Obtener encabezado HTTP llamado Authorization
-        String authorizationHeader = request.getHeader("Authorization"); //Bearer jwt
-        if(!StringUtils.hasText(authorizationHeader) || !authorizationHeader.startsWith("Bearer")){
+
+
+        String jwt = jwtService.extractJwtFromRequest(request);
+        if(!StringUtils.hasText(jwt)){
             filterChain.doFilter(request, response);
             return;
         }
 
-        //2. Obtener token JWT desde el encabezado
-        String jwt = authorizationHeader.split(" ")[1];
 
         //3. Obtener el subject/username desde el encabezado
         // esta acción a su vez valida el formato del token, firma y fecha de expiración
