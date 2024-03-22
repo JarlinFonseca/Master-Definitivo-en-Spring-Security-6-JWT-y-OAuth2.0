@@ -2,8 +2,10 @@ package com.cursos.api.springsecuritycourse.persistence.entity.security;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-public class GrantedPermission {
+public class GrantedPermission implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

@@ -2,12 +2,12 @@ package com.cursos.api.springsecuritycourse.persistence.entity.security;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
+import java.io.Serializable;
 import java.util.List;
 
 @Entity
-public class Role {
+public class Role implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;

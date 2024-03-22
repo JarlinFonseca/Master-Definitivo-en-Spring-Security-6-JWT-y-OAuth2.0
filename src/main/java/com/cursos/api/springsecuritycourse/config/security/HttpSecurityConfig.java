@@ -44,9 +44,9 @@ public class HttpSecurityConfig {
                 .sessionManagement(sessMagConfig -> sessMagConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(daoAuthProvider)
                 .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
-                .authorizeHttpRequests(authReqConfig ->{
-                    authReqConfig.anyRequest().access(authorizationManager);
-                })
+                .authorizeHttpRequests(authReqConfig ->
+                    authReqConfig.anyRequest().access(authorizationManager)
+                )
                 .exceptionHandling(exceptionConfig -> {
                     exceptionConfig.authenticationEntryPoint(authenticationEntryPoint);
                     exceptionConfig.accessDeniedHandler(accessDeniedHandler);
