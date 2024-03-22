@@ -12,7 +12,7 @@ public class Role {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "role")
+    @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
     private List<GrantedPermission> permissions;
 
     public Long getId() {
