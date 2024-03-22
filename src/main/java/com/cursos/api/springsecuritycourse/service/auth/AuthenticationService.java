@@ -37,14 +37,14 @@ public class AuthenticationService {
 
     public RegisteredUser registerOneCustomer(SaveUser newUser) {
         User user = userService.registerOneCustomer(newUser);
+        String jwt = jwtService.generateToken(user, generateExtraClaims(user));
+        saveUserToken(user, jwt);
 
         RegisteredUser userDto = new RegisteredUser();
         userDto.setId(user.getId());
         userDto.setName(user.getName());
         userDto.setUsername(user.getUsername());
         userDto.setRole(user.getRole().getName());
-
-        String jwt = jwtService.generateToken(user, generateExtraClaims(user));
         userDto.setJwt(jwt);
 
         return userDto;
@@ -69,11 +69,22 @@ public class AuthenticationService {
 
         UserDetails user = userService.findOneByUsername(authRequest.getUsername()).orElseThrow();
         String jwt = jwtService.generateToken(user, generateExtraClaims((User) user));
+        saveUserToken((User) user, jwt);
 
         AuthenticationResponse authRsp = new AuthenticationResponse();
         authRsp.setJwt(jwt);
 
         return authRsp;
+    }
+
+    private void saveUserToken(User user, String jwt) {
+        JwtToken token = new JwtToken();
+        token.setToken(jwt);
+        token.setUser(user);
+        token.setExpiration(jwtService.extractExpiration(jwt));
+        token.setValid(true);
+
+        jwtTokenRepository.save(token);
     }
 
     public boolean validateToken(String jwt) {

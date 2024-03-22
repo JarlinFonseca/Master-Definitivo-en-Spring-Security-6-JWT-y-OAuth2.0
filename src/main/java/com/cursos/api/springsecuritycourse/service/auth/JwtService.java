@@ -73,4 +73,8 @@ public class JwtService {
         //2. Obtener token JWT desde el encabezado
         return authorizationHeader.split(" ")[1];
     }
+
+    public Date extractExpiration(String jwt) {
+        return extractAllClaims(jwt).getExpiration();
+    }
 }
