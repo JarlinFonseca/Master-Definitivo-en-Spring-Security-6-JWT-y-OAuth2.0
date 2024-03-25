@@ -22,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-@CrossOrigin
+//@CrossOrigin
 @RestController
 @RequestMapping("/products")
 @RequiredArgsConstructor
@@ -42,10 +42,10 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    @CrossOrigin(origins =  {
+/*    @CrossOrigin(origins =  {
             "http://127.0.0.1:5500",
             "https://www.google.com"
-    })
+    })*/
     @PreAuthorize("hasAuthority('READ_ONE_PRODUCT')")
     @GetMapping("/{productId}")
     public ResponseEntity<Product> findOneById(@PathVariable Long productId){
