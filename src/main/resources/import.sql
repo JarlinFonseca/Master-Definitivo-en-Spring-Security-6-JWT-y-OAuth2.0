@@ -7,6 +7,8 @@ INSERT INTO module (name, base_path) VALUES ('AUTH', '/auth');
 -- CREACIÓN DE MODULO PARA RETO SECCION 11
 INSERT INTO module (name, base_path) VALUES ('PERMISSION', '/permissions');
 
+INSERT INTO module (name, base_path) VALUES ('USERS', '/users');
+
 -- CREACIÓN DE OPERACIONES
 INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('READ_ALL_PRODUCTS','', 'GET', false, 1);
 INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('READ_ONE_PRODUCT','/[0-9]*', 'GET', false, 1);
@@ -34,6 +36,9 @@ INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('
 INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('CREATE_ONE_PERMISSION','', 'POST', false, 5);
 INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('DELETE_ONE_PERMISSION','/[0-9]*', 'DELETE', false, 5);
 
+
+INSERT INTO operation (name, path, http_method, permit_all, module_id) VALUES ('VERIFY_USER_AUTH','/[a-zA-Z0-9]+', 'GET', false, 6);
+
 -- CREACIÓN DE ROLES
 INSERT INTO role (name) VALUES ('CUSTOMER');
 INSERT INTO role (name) VALUES ('ASSISTANT_ADMINISTRATOR');
@@ -41,6 +46,7 @@ INSERT INTO role (name) VALUES ('ADMINISTRATOR');
 
 -- CREACIÓN DE PERMISOS
 INSERT INTO granted_permission (role_id, operation_id) VALUES (1, 15);
+INSERT INTO granted_permission (role_id, operation_id) VALUES (1, 21);
 
 INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 1);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 2);
@@ -49,6 +55,7 @@ INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 6);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 7);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 9);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 15);
+INSERT INTO granted_permission (role_id, operation_id) VALUES (2, 21);
 
 INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 1);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 2);
@@ -67,6 +74,8 @@ INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 17);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 18);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 19);
 INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 20);
+
+INSERT INTO granted_permission (role_id, operation_id) VALUES (3, 21);
 
 -- CREACIÓN DE USUARIOS
 INSERT INTO "user" (username, name, password, role_id) VALUES ('lmarquez', 'luis márquez', '$2a$10$ywh1O2EwghHmFIMGeHgsx.9lMw5IXpg4jafeFS.Oi6nFv0181gHli', 1);
