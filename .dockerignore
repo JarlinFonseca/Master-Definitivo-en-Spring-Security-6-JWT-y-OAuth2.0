@@ -1,6 +1,7 @@
 .idea
 .mvn
 cors-test/*
+client/*
 .gitignore
 .git
 teoria
