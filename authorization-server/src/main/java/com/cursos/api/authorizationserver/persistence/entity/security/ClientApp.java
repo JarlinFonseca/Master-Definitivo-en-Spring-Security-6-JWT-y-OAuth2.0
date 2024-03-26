@@ -28,4 +28,6 @@ public class ClientApp {
     private List<String> redirectUris;
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> scopes;
+    private int durationInMinutes;
+    private boolean requireProofKey;
 }
