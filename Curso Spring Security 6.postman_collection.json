@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "240011eb-3cfd-458e-8022-6be553930b76",
-		"name": "Curso Spring Security 6",
+		"_postman_id": "722c21a7-c03e-45be-8b82-e2e6a5e34b65",
+		"name": "Curso Spring Security 6, JWT y OAuth2.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26017480"
+		"_exporter_id": "25629549"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMTQyODU2LCJleHAiOjE3MTExNDQ2NTYsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.qQIXr3BmVbVt8khAZhyEaeBEJfnYEDoesqQCivS1uRA",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDA4MTQyLCJleHAiOjE3MTE0MDk5NDIsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.4ABU9yxs4770F3CZvDj_lMRhTMDPR5OR2onJOHzlBe0",
 									"type": "string"
 								}
 							]
@@ -101,7 +101,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMTQzNzA5LCJleHAiOjE3MTExNDU1MDksInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.BtpatrOQvYjXIVF6dy6hy-LRQbDHXyzixU0a9OBjVyE",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDA4MTQyLCJleHAiOjE3MTE0MDk5NDIsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.4ABU9yxs4770F3CZvDj_lMRhTMDPR5OR2onJOHzlBe0",
 									"type": "string"
 								}
 							]
@@ -275,6 +275,41 @@
 			]
 		},
 		{
+			"name": "Categorias",
+			"item": [
+				{
+					"name": "Gert categories",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzA2ODk5NjY0LCJleHAiOjE3MDY5MDE0NjQsInJvbGUiOiJST0xFX0FETUlOSVNUUkFUT1IiLCJuYW1lIjoibWVuZ2FubyBoZXJuw6FuZGV6IiwiYXV0aG9yaXRpZXMiOlt7ImF1dGhvcml0eSI6IlJFQURfQUxMX1BST0RVQ1RTIn0seyJhdXRob3JpdHkiOiJSRUFEX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiRElTQUJMRV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IkNSRUFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJSRUFEX01ZX1BST0ZJTEUifV19.wglGIjZzs_qq_VU8DrFrS0PPsSAHeho7fiTgEeWlRKQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:9191/api/v1/categories",
+							"host": [
+								"localhost"
+							],
+							"port": "9191",
+							"path": [
+								"api",
+								"v1",
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "PERMISSIONS",
 			"item": [
 				{
@@ -421,6 +456,67 @@
 			]
 		},
 		{
+			"name": "CLIENT",
+			"item": [
+				{
+					"name": "Login - Prueba client",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"username\": \"mhernandez\",\r\n    \"password\": \"clave789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8686/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8686",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Registrar CUSTOMER",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pepitp01\",\r\n    \"name\": \"pepito juanes\",\r\n    \"password\": \"12345678\",\r\n    \"repeatedPassword\": \"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:9191/api/v1/customers",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"customers"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Login CUSTOMER",
 			"request": {
 				"method": "POST",
@@ -549,7 +645,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMTIyMzc5LCJleHAiOjE3MTExMjQxNzksInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJST0xFX0FETUlOSVNUUkFUT1IifV19.42bmMTEd-DIPx6ty7tlbhyqaMjHUNezHSFtqMSJbg1c",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsbWFycXVleiIsImlhdCI6MTcxMTQwNDU0OSwiZXhwIjoxNzExNDA2MzQ5LCJyb2xlIjoiQ1VTVE9NRVIiLCJuYW1lIjoibHVpcyBtw6FycXVleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX01ZX1BST0ZJTEUifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQ1VTVE9NRVIifV19.Y8EKrZVQ_5SG3HwzbiqofI5F7bm9k0D0qQIF3rewWxc",
 							"type": "string"
 						}
 					]
@@ -597,6 +693,37 @@
 							"key": "jwt",
 							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMDQxNzQ2LCJleHAiOjE3MTEwNDM1NDYsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJST0xFX0FETUlOSVNUUkFUT1IifV19.iDQAm884T88vi7JGQTZF7xw2D6FNKFk-LZOwXQh8rCs"
 						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Verificar acceso usuario autenticado dado el username",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDA4MTQyLCJleHAiOjE3MTE0MDk5NDIsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.4ABU9yxs4770F3CZvDj_lMRhTMDPR5OR2onJOHzlBe0",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:9191/api/v1/users/lmarquez",
+					"host": [
+						"localhost"
+					],
+					"port": "9191",
+					"path": [
+						"api",
+						"v1",
+						"users",
+						"lmarquez"
 					]
 				}
 			},
