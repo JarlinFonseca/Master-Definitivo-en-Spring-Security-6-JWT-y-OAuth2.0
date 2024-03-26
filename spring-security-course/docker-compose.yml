@@ -24,7 +24,7 @@ services:
       - db
 
   client:
-    build: client/.
+    build: ../client/.
     image: my-client-app:v1
     ports:
       - "8686:8080"
