@@ -34,7 +34,7 @@ public class ClientAppMapper {
                         .refreshTokenTimeToLive(Duration.ofMinutes(clientApp.getDurationInMinutes() * 4L))
                         .build())
                 .clientSettings(ClientSettings.builder()
-                        .requireProofKey(clientApp.isRequireProofKey())
+                        .requireProofKey(clientApp.isRequiredProofKey())
                         .build())
                 .build();
     }

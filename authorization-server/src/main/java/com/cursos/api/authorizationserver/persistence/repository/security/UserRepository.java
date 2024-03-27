@@ -1,6 +1,6 @@
 package com.cursos.api.authorizationserver.persistence.repository.security;
 
-import com.cursos.api.authorizationserver.persistence.entity.security.User;;
+import com.cursos.api.authorizationserver.persistence.entity.security.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

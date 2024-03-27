@@ -29,5 +29,5 @@ public class ClientApp {
     @ElementCollection(fetch = FetchType.EAGER)
     private List<String> scopes;
     private int durationInMinutes;
-    private boolean requireProofKey;
+    private boolean requiredProofKey;
 }
