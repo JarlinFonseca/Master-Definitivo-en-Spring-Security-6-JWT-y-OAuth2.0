@@ -52,7 +52,7 @@ public class AuthorizationSecurityConfig {
                     authConfig.anyRequest().authenticated();
                 });
 
-        http.formLogin(withDefaults());
+        http.formLogin(formLoginConfig -> formLoginConfig.loginPage("/login").permitAll());
 
         return http.build();
     }
