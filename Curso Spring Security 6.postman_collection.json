@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "722c21a7-c03e-45be-8b82-e2e6a5e34b65",
+		"_postman_id": "92ae81f3-60cc-4f0a-90ba-48458fb518e5",
 		"name": "Curso Spring Security 6, JWT y OAuth2.0",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "25629549"
+		"_exporter_id": "26017480"
 	},
 	"item": [
 		{
@@ -17,7 +17,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDA4MTQyLCJleHAiOjE3MTE0MDk5NDIsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.4ABU9yxs4770F3CZvDj_lMRhTMDPR5OR2onJOHzlBe0",
+									"value": "eyJraWQiOiI0Y2UyMDNiNC1hYTlkLTRjMWMtYTg0Ni1mMmY2MzFhYjAwOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJhdWQiOiJteS1vd24tY2xpZW50IiwibmJmIjoxNzExNTc3NzY4LCJwZXJtaXNzaW9ucyI6WyJSRUFEX0FMTF9QUk9EVUNUUyIsIlJFQURfT05FX1BST0RVQ1QiLCJVUERBVEVfT05FX1BST0RVQ1QiLCJSRUFEX0FMTF9DQVRFR09SSUVTIiwiUkVBRF9PTkVfQ0FURUdPUlkiLCJVUERBVEVfT05FX0NBVEVHT1JZIiwiUkVBRF9NWV9QUk9GSUxFIiwiVkVSSUZZX1VTRVJfQVVUSCIsIlJPTEVfQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiXSwic2NvcGUiOlsiQUxMIiwib3BlbmlkIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTU5NS9hdXRob3JpemF0aW9uLXNlcnZlciIsImV4cCI6MTcxMTU3ODM2OCwiaWF0IjoxNzExNTc3NzY4LCJqdGkiOiIxMTJmODYxYS04YjQ5LTQ0ZGYtYmI1ZS0yZDdlOTQzMzQwZTMifQ.klcfynCjbxbFZrYTrU3LXjG06WIQw70k5EWDpd29ceXJQNvD_gV1wWzA5hchj9Mf3L-850wFVmcTSBj9BFsmyRs9_LYpeFiesMg5YMCJHlocTzQvAHc5K3dr80pAZXLCj2GgnnVES84BOAinNct3fkH46He2QMq6W1dz4aCxGlU2ugE1dIEW9SBnNBrWlG0J70Mc__3KLpos-sVBIS5kFHpD-UMHO76TVW1dcL71O9P14O2O2dBWFLPlhXLHZyXM_Mon3FMIhCaefVb-tSnRFS3UAVcdnUjgg2q5QTsnx_1d9YvWKt7qTtkDcUjEvici_ykNGAY7mTU_zByyIO8F1g",
 									"type": "string"
 								}
 							]
@@ -101,7 +101,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDA4MTQyLCJleHAiOjE3MTE0MDk5NDIsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.4ABU9yxs4770F3CZvDj_lMRhTMDPR5OR2onJOHzlBe0",
+									"value": "eyJraWQiOiI0Y2UyMDNiNC1hYTlkLTRjMWMtYTg0Ni1mMmY2MzFhYjAwOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJhdWQiOiJjbGllbnQiLCJuYmYiOjE3MTE1NzMwOTEsInBlcm1pc3Npb25zIjpbIlJFQURfQUxMX1BST0RVQ1RTIiwiUkVBRF9PTkVfUFJPRFVDVCIsIlVQREFURV9PTkVfUFJPRFVDVCIsIlJFQURfQUxMX0NBVEVHT1JJRVMiLCJSRUFEX09ORV9DQVRFR09SWSIsIlVQREFURV9PTkVfQ0FURUdPUlkiLCJSRUFEX01ZX1BST0ZJTEUiLCJWRVJJRllfVVNFUl9BVVRIIiwiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJdLCJzY29wZSI6WyJvcGVuaWQiLCJSRUFEX0FMTF9QUk9EVUNUUyIsIlJFQURfT05FX1BST0RVQ1QiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5NTk1L2F1dGhvcml6YXRpb24tc2VydmVyIiwiZXhwIjoxNzExNTczNjkxLCJpYXQiOjE3MTE1NzMwOTEsImp0aSI6ImZmMDJmZDEwLThiNDItNDZjOS04MTllLTIxNmRiZTM1YjI5MiJ9.IuYT2e-bfn6zA2pVj7Hz1qQj9Px-5htuNHqFr5JLIlFc89XqkmTlmCjVTyVXSM6YjY8oryHZL-UWNbkmpUFuTqM_kkDAlM8EZo_MctESHubvAspOc56RWjTdUi6KapgLp0EnFAs8OHyqANWMKkMtaTgwGdAHoQjtLF-rP7kAeiFnVZhLxfdzYYcgblEF6nXsAtnra6dOg89_ZpdOE_pfLp3cSxoF1ezAEx7pKCn6tN_y7tqpyBZN2QpFuFgFirdA0TDzvIRQwEuVbPvWGChj5QSqjac5NWaEV9Jy2Ios9QF7OobvhNkzcTsOFDzd1dTtIol-ty4DiYsSOoeRuwCj7w",
 									"type": "string"
 								}
 							]
@@ -139,7 +139,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMTQyODU2LCJleHAiOjE3MTExNDQ2NTYsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.qQIXr3BmVbVt8khAZhyEaeBEJfnYEDoesqQCivS1uRA",
+									"value": "eyJraWQiOiI0Y2UyMDNiNC1hYTlkLTRjMWMtYTg0Ni1mMmY2MzFhYjAwOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJhdWQiOiJteS1vd24tY2xpZW50IiwibmJmIjoxNzExNTc0NjgyLCJwZXJtaXNzaW9ucyI6WyJSRUFEX0FMTF9QUk9EVUNUUyIsIlJFQURfT05FX1BST0RVQ1QiLCJVUERBVEVfT05FX1BST0RVQ1QiLCJSRUFEX0FMTF9DQVRFR09SSUVTIiwiUkVBRF9PTkVfQ0FURUdPUlkiLCJVUERBVEVfT05FX0NBVEVHT1JZIiwiUkVBRF9NWV9QUk9GSUxFIiwiVkVSSUZZX1VTRVJfQVVUSCIsIlJPTEVfQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiXSwic2NvcGUiOlsiQUxMIiwib3BlbmlkIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTU5NS9hdXRob3JpemF0aW9uLXNlcnZlciIsImV4cCI6MTcxMTU3NTI4MiwiaWF0IjoxNzExNTc0NjgyLCJqdGkiOiI1MGRlMDIzNi02ODYxLTQ4N2ItOWUyZC1hMWVjYjE0NGJlZjQifQ.Si1iXLPhX_vZiH2DZRsP7PoSq9JmEOI7YwhD9L0mQ4fAVPOiiI1ZnXf703AEsv66votbEPygtQf7OsVpyrEXv9s5RaT3xajwJ95nEDrHHqOCVznJhFToam-NYVsnfWpmwCLFDJG7cxo6LhOJ7bHSvG3RPiS-hRre6QVYzVGhzmINshzwcCjJYaiLqXgDGtsBs_HfzWIEewksoOv2PuQdZy6kn8DqLtx6MvZmW8ykcexpoYEfIyy5fZIYWmoU0x7UoTI8-PAGvMSnCR5o2X52G4n6_e2PZBIjQU7VHMkANf0gHOsMzmLRJuvsoREX3cus2vyXTA1XcJJttDsx1JQAig",
 									"type": "string"
 								}
 							]
@@ -155,7 +155,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ALGUN PRODUCTO\",\r\n    \"price\": 0.01,\r\n    \"categoryId\": 2\r\n}",
+							"raw": "{\r\n    \"name\": \"Iphone 15 pro max\",\r\n    \"price\": 1200,\r\n    \"categoryId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -185,7 +185,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJpYXQiOjE3MTExMjE0NjMsImV4cCI6MTcxMTEyMzI2Mywicm9sZSI6IkFTU0lTVEFOVF9BRE1JTklTVFJBVE9SIiwibmFtZSI6ImZ1bGFubyBww6lyZXoiLCJhdXRob3JpdGllcyI6W3siYXV0aG9yaXR5IjoiUkVBRF9BTExfUFJPRFVDVFMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9BTExfQ0FURUdPUklFUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlVQREFURV9PTkVfQ0FURUdPUlkifSx7ImF1dGhvcml0eSI6IlJFQURfTVlfUFJPRklMRSJ9LHsiYXV0aG9yaXR5IjoiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJ9XX0.x8esuCpl9hWlUm7FvCmHvOaLL58QxehIN1604W4bn58",
+									"value": "eyJraWQiOiI0Y2UyMDNiNC1hYTlkLTRjMWMtYTg0Ni1mMmY2MzFhYjAwOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJhdWQiOiJteS1vd24tY2xpZW50IiwibmJmIjoxNzExNTc0NjgyLCJwZXJtaXNzaW9ucyI6WyJSRUFEX0FMTF9QUk9EVUNUUyIsIlJFQURfT05FX1BST0RVQ1QiLCJVUERBVEVfT05FX1BST0RVQ1QiLCJSRUFEX0FMTF9DQVRFR09SSUVTIiwiUkVBRF9PTkVfQ0FURUdPUlkiLCJVUERBVEVfT05FX0NBVEVHT1JZIiwiUkVBRF9NWV9QUk9GSUxFIiwiVkVSSUZZX1VTRVJfQVVUSCIsIlJPTEVfQVNTSVNUQU5UX0FETUlOSVNUUkFUT1IiXSwic2NvcGUiOlsiQUxMIiwib3BlbmlkIl0sImlzcyI6Imh0dHA6Ly9sb2NhbGhvc3Q6OTU5NS9hdXRob3JpemF0aW9uLXNlcnZlciIsImV4cCI6MTcxMTU3NTI4MiwiaWF0IjoxNzExNTc0NjgyLCJqdGkiOiI1MGRlMDIzNi02ODYxLTQ4N2ItOWUyZC1hMWVjYjE0NGJlZjQifQ.Si1iXLPhX_vZiH2DZRsP7PoSq9JmEOI7YwhD9L0mQ4fAVPOiiI1ZnXf703AEsv66votbEPygtQf7OsVpyrEXv9s5RaT3xajwJ95nEDrHHqOCVznJhFToam-NYVsnfWpmwCLFDJG7cxo6LhOJ7bHSvG3RPiS-hRre6QVYzVGhzmINshzwcCjJYaiLqXgDGtsBs_HfzWIEewksoOv2PuQdZy6kn8DqLtx6MvZmW8ykcexpoYEfIyy5fZIYWmoU0x7UoTI8-PAGvMSnCR5o2X52G4n6_e2PZBIjQU7VHMkANf0gHOsMzmLRJuvsoREX3cus2vyXTA1XcJJttDsx1JQAig",
 									"type": "string"
 								}
 							]
@@ -201,7 +201,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\": \"ALGUN PRODUCTO\",\r\n    \"price\": 0.01,\r\n    \"categoryId\": 2\r\n}",
+							"raw": "{\r\n    \"name\": \"Iphone 15 Pro Max\",\r\n    \"price\": 1200,\r\n    \"categoryId\": 1\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -320,7 +320,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExMTM2MTM1LCJleHAiOjE3MTExMzc5MzUsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.iMkCLk41voWtxNt_FM9g77opaLjgT3VRuuWZ_gY5oLc",
+									"value": "eyJraWQiOiI0Y2UyMDNiNC1hYTlkLTRjMWMtYTg0Ni1mMmY2MzFhYjAwOWYiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJmcGVyZXoiLCJhdWQiOiJjbGllbnQiLCJuYmYiOjE3MTE1NzMwOTEsInBlcm1pc3Npb25zIjpbIlJFQURfQUxMX1BST0RVQ1RTIiwiUkVBRF9PTkVfUFJPRFVDVCIsIlVQREFURV9PTkVfUFJPRFVDVCIsIlJFQURfQUxMX0NBVEVHT1JJRVMiLCJSRUFEX09ORV9DQVRFR09SWSIsIlVQREFURV9PTkVfQ0FURUdPUlkiLCJSRUFEX01ZX1BST0ZJTEUiLCJWRVJJRllfVVNFUl9BVVRIIiwiUk9MRV9BU1NJU1RBTlRfQURNSU5JU1RSQVRPUiJdLCJzY29wZSI6WyJvcGVuaWQiLCJSRUFEX0FMTF9QUk9EVUNUUyIsIlJFQURfT05FX1BST0RVQ1QiXSwiaXNzIjoiaHR0cDovL2xvY2FsaG9zdDo5NTk1L2F1dGhvcml6YXRpb24tc2VydmVyIiwiZXhwIjoxNzExNTczNjkxLCJpYXQiOjE3MTE1NzMwOTEsImp0aSI6ImZmMDJmZDEwLThiNDItNDZjOS04MTllLTIxNmRiZTM1YjI5MiJ9.IuYT2e-bfn6zA2pVj7Hz1qQj9Px-5htuNHqFr5JLIlFc89XqkmTlmCjVTyVXSM6YjY8oryHZL-UWNbkmpUFuTqM_kkDAlM8EZo_MctESHubvAspOc56RWjTdUi6KapgLp0EnFAs8OHyqANWMKkMtaTgwGdAHoQjtLF-rP7kAeiFnVZhLxfdzYYcgblEF6nXsAtnra6dOg89_ZpdOE_pfLp3cSxoF1ezAEx7pKCn6tN_y7tqpyBZN2QpFuFgFirdA0TDzvIRQwEuVbPvWGChj5QSqjac5NWaEV9Jy2Ios9QF7OobvhNkzcTsOFDzd1dTtIol-ty4DiYsSOoeRuwCj7w",
 									"type": "string"
 								}
 							]
@@ -488,6 +488,231 @@
 			]
 		},
 		{
+			"name": "OAuth 2.0",
+			"item": [
+				{
+					"name": "Get token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "string"
+								},
+								{
+									"key": "username",
+									"value": "client",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "client",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://oauthdebugger.com/debug",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "Sos8_k26DwpVrswLSl3mKP_iRVrX1M_VA00-dktX0ppz0z5z54V8WauBLB32c8N4ARy70R4TvwqevBkA40tVSBxjmHPJjpymDi-YJVcCyOneQvdnETyi2xc0YZVD9yAE",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9595/authorization-server/oauth2/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9595",
+							"path": [
+								"authorization-server",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get token with PKCE",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "my-own-client",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "authorization_code",
+									"type": "text"
+								},
+								{
+									"key": "client_id",
+									"value": "my-own-client",
+									"type": "text"
+								},
+								{
+									"key": "redirect_uri",
+									"value": "https://oauthdebugger.com/debug",
+									"type": "text"
+								},
+								{
+									"key": "code",
+									"value": "ABY9tjw-urrxxR6pNx4TK6fBl3dH707_QdlsikfhCz9IMayOMrh4Xye99LEqn2PwTdYIaD2tSIXYqy1_cxjTD4nGhOkt4urZKz4r3uNN3XhH_BiaqHjTyq_570NJNAXo",
+									"type": "text"
+								},
+								{
+									"key": "code_verifier",
+									"value": "hola",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9595/authorization-server/oauth2/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9595",
+							"path": [
+								"authorization-server",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Refresh Token",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "my-own-client",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "refresh_token",
+									"type": "text"
+								},
+								{
+									"key": "refresh_token",
+									"value": "b6d_A6TnIodLhgHCh3PM8iRiOzlM_ME0LtW1ppoEJvFlbWJBEoeFEipYyRBhZS5Jdy6oLXrknIIBR9hwXjDTF96hkLpIJd5O8c4dYfgX0I2KQiI2Fcj7hyM1WXaLVvhs",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9595/authorization-server/oauth2/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9595",
+							"path": [
+								"authorization-server",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Using client credentials",
+					"request": {
+						"auth": {
+							"type": "basic",
+							"basic": [
+								{
+									"key": "username",
+									"value": "my-own-client",
+									"type": "string"
+								},
+								{
+									"key": "password",
+									"value": "secret",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "grant_type",
+									"value": "client_credentials",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:9595/authorization-server/oauth2/token",
+							"host": [
+								"localhost"
+							],
+							"port": "9595",
+							"path": [
+								"authorization-server",
+								"oauth2",
+								"token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
 			"name": "Registrar CUSTOMER",
 			"request": {
 				"method": "POST",
@@ -645,7 +870,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJsbWFycXVleiIsImlhdCI6MTcxMTQwNDU0OSwiZXhwIjoxNzExNDA2MzQ5LCJyb2xlIjoiQ1VTVE9NRVIiLCJuYW1lIjoibHVpcyBtw6FycXVleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX01ZX1BST0ZJTEUifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQ1VTVE9NRVIifV19.Y8EKrZVQ_5SG3HwzbiqofI5F7bm9k0D0qQIF3rewWxc",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJtaGVybmFuZGV6IiwiaWF0IjoxNzExNDc3MjU2LCJleHAiOjE3MTE0NzkwNTYsInJvbGUiOiJBRE1JTklTVFJBVE9SIiwibmFtZSI6Im1lbmdhbm8gaGVybsOhbmRleiIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QUk9EVUNUUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUFJPRFVDVCJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QUk9EVUNUIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IkRJU0FCTEVfT05FX1BST0RVQ1QifSx7ImF1dGhvcml0eSI6IlJFQURfQUxMX0NBVEVHT1JJRVMifSx7ImF1dGhvcml0eSI6IlJFQURfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJDUkVBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJVUERBVEVfT05FX0NBVEVHT1JZIn0seyJhdXRob3JpdHkiOiJESVNBQkxFX09ORV9DQVRFR09SWSJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9NWV9QUk9GSUxFIn0seyJhdXRob3JpdHkiOiJSRUFEX0FMTF9QRVJNSVNTSU9OUyJ9LHsiYXV0aG9yaXR5IjoiUkVBRF9PTkVfUEVSTUlTU0lPTiJ9LHsiYXV0aG9yaXR5IjoiQ1JFQVRFX09ORV9QRVJNSVNTSU9OIn0seyJhdXRob3JpdHkiOiJERUxFVEVfT05FX1BFUk1JU1NJT04ifSx7ImF1dGhvcml0eSI6IlZFUklGWV9VU0VSX0FVVEgifSx7ImF1dGhvcml0eSI6IlJPTEVfQURNSU5JU1RSQVRPUiJ9XX0.UZNni7Xq7KTrOGPhy5vTr7cvOvQC_SMyd6gU1DsoieI",
 							"type": "string"
 						}
 					]
