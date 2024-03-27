@@ -1,25 +1,23 @@
 package com.cursos.api.springsecuritycourse.config.security;
 
 import com.cursos.api.springsecuritycourse.config.security.filter.JwtAuthenticationFilter;
-import com.cursos.api.springsecuritycourse.persistence.util.RoleEnum;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authorization.AuthorizationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
-import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.oauth2.jwt.JwtDecoders;
+import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
+import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.access.intercept.RequestAuthorizationContext;
-import org.springframework.security.web.util.matcher.RegexRequestMatcher;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -65,64 +63,17 @@ public class ResourceServerHttpSecurityConfig {
 
     }
 
+    @Bean
+    public JwtAuthenticationConverter jwtAuthenticationConverter() {
+        JwtGrantedAuthoritiesConverter jwtGrantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
+        jwtGrantedAuthoritiesConverter.setAuthoritiesClaimName("permissions");
+        jwtGrantedAuthoritiesConverter.setAuthorityPrefix("");
 
-    private static void buildRequestMatchers(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authReqConfig) {
-            /*
-              Autorización de enpoints de products
-             */
-        authReqConfig.requestMatchers(HttpMethod.GET, "/products")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
+        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
+        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(jwtGrantedAuthoritiesConverter);
 
-        authReqConfig.requestMatchers(HttpMethod.GET, "/products/{productId}")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
-
-
-        authReqConfig.requestMatchers(HttpMethod.POST, "/products")
-                .hasRole(RoleEnum.ADMINISTRATOR.name());
-
-
-//        authReqConfig.requestMatchers(HttpMethod.PUT,"/products/{productId}")
-        authReqConfig.requestMatchers(RegexRequestMatcher.regexMatcher(HttpMethod.GET, "/products/[0-9]*"))
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
-
-        authReqConfig.requestMatchers(HttpMethod.PUT, "/products/{productId}/disabled")
-                .hasRole(RoleEnum.ADMINISTRATOR.name());
-
-
-            /*
-              Autorización de enpoints de categories
-             */
-
-        authReqConfig.requestMatchers(HttpMethod.GET, "/categories")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
-
-        authReqConfig.requestMatchers(HttpMethod.GET, "/categories/{categoryId}")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
-
-
-        authReqConfig.requestMatchers(HttpMethod.POST, "/categories")
-                .hasRole(RoleEnum.ADMINISTRATOR.name());
-
-        authReqConfig.requestMatchers(HttpMethod.PUT, "/categories/{categoryId}")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name());
-
-        authReqConfig.requestMatchers(HttpMethod.PUT, "/categories/{categoryId}/disabled")
-                .hasRole(RoleEnum.ADMINISTRATOR.name());
-
-        authReqConfig.requestMatchers(HttpMethod.GET, "/auth/profile")
-                .hasAnyRole(RoleEnum.ADMINISTRATOR.name(), RoleEnum.ASSISTANT_ADMINISTRATOR.name(), RoleEnum.CUSTOMER.name());
-
-
-            /*
-              Autorización de enpoints públicos
-             */
-
-        authReqConfig.requestMatchers(HttpMethod.POST, "/customers").permitAll();
-        authReqConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
-        authReqConfig.requestMatchers(HttpMethod.GET, "/auth/validate-token").permitAll();
-        authReqConfig.requestMatchers(HttpMethod.GET, "/customers").denyAll();
-
-        authReqConfig.anyRequest().authenticated();
+        return jwtAuthenticationConverter;
     }
+
 
 }
