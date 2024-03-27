@@ -3,9 +3,9 @@ package com.cursos.api.springsecuritycourse.config.security;
 import com.cursos.api.springsecuritycourse.config.security.filter.JwtAuthenticationFilter;
 import com.cursos.api.springsecuritycourse.persistence.util.RoleEnum;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.AuthenticationProvider;
 import org.springframework.security.authorization.AuthorizationManager;
@@ -14,18 +14,12 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.annotation.web.configurers.AuthorizeHttpRequestsConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.oauth2.jwt.JwtDecoders;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.access.AccessDeniedHandler;
 import org.springframework.security.web.access.intercept.RequestAuthorizationContext;
-import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 import org.springframework.security.web.util.matcher.RegexRequestMatcher;
-import org.springframework.web.cors.CorsConfiguration;
-import org.springframework.web.cors.CorsConfigurationSource;
-import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-
-import java.util.Arrays;
-import java.util.List;
 
 import static org.springframework.security.config.Customizer.withDefaults;
 
@@ -33,7 +27,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 @EnableWebSecurity
 @RequiredArgsConstructor
 //@EnableMethodSecurity(prePostEnabled = true)
-public class HttpSecurityConfig {
+public class ResourceServerHttpSecurityConfig {
 
 
     private final AuthenticationProvider daoAuthProvider;
@@ -45,6 +39,9 @@ public class HttpSecurityConfig {
     private final AccessDeniedHandler accessDeniedHandler;
     private final AuthorizationManager<RequestAuthorizationContext> authorizationManager;
 
+    @Value("${spring.security.oauth2.resourceserver.jwt.issuer-uri}")
+    private String issuerUri;
+
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
@@ -52,8 +49,8 @@ public class HttpSecurityConfig {
                 .cors(withDefaults())
                 .csrf(AbstractHttpConfigurer::disable)
                 .sessionManagement(sessMagConfig -> sessMagConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
-                .authenticationProvider(daoAuthProvider)
-                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
+                //.authenticationProvider(daoAuthProvider)
+                //.addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
                 .authorizeHttpRequests(authReqConfig ->
                     authReqConfig.anyRequest().access(authorizationManager)
                 )
@@ -61,38 +58,13 @@ public class HttpSecurityConfig {
                     exceptionConfig.authenticationEntryPoint(authenticationEntryPoint);
                     exceptionConfig.accessDeniedHandler(accessDeniedHandler);
                 })
+                .oauth2ResourceServer(oauth2ResourceServerConfig ->
+                        oauth2ResourceServerConfig.jwt(jwtConfig ->
+                                jwtConfig.decoder(JwtDecoders.fromIssuerLocation(issuerUri))))
                 .build();
 
     }
 
-    @Profile({"local", "dev"})
-    @Bean
-    CorsConfigurationSource defaultCorsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList( "http://127.0.0.1:5500", "https://www.google.com"));
-        configuration.setAllowedMethods(List.of("*"));
-        configuration.setAllowedHeaders(List.of("*"));
-        configuration.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
-
-
-    @Profile("docker")
-    @Bean
-    CorsConfigurationSource dockerCorsConfigurationSource() {
-        CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(List.of("http://client"));
-        configuration.setAllowedMethods(List.of("*"));
-        configuration.setAllowedHeaders(List.of("*"));
-        configuration.setAllowCredentials(true);
-
-        UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
-        source.registerCorsConfiguration("/**", configuration);
-        return source;
-    }
 
     private static void buildRequestMatchers(AuthorizeHttpRequestsConfigurer<HttpSecurity>.AuthorizationManagerRequestMatcherRegistry authReqConfig) {
             /*
