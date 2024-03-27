@@ -78,7 +78,7 @@ public class AuthorizationSecurityConfig {
     @Bean
     public AuthorizationServerSettings authorizationServerSettings() {
         return AuthorizationServerSettings.builder()
-                .issuer("http://localhost:9595")
+                .issuer("http://localhost:9595/authorization-server")
                 .build();
     }
 
