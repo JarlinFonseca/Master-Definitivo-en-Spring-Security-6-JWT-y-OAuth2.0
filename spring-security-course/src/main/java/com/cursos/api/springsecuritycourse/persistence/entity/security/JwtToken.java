@@ -13,7 +13,7 @@ import lombok.Setter;
 import java.io.Serializable;
 import java.util.Date;
 
-//@Entity
+@Entity
 @Getter
 @Setter
 public class JwtToken implements Serializable {

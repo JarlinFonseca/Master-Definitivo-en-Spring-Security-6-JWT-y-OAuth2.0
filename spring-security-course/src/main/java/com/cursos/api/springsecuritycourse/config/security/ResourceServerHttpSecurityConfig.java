@@ -27,13 +27,7 @@ import static org.springframework.security.config.Customizer.withDefaults;
 //@EnableMethodSecurity(prePostEnabled = true)
 public class ResourceServerHttpSecurityConfig {
 
-
-    private final AuthenticationProvider daoAuthProvider;
-
-    private final JwtAuthenticationFilter jwtAuthenticationFilter;
-
     private final AuthenticationEntryPoint authenticationEntryPoint;
-
     private final AccessDeniedHandler accessDeniedHandler;
     private final AuthorizationManager<RequestAuthorizationContext> authorizationManager;
 
